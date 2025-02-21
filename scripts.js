@@ -12,6 +12,7 @@ const getMicAndCamera = async (e) => {
 
     try {
         stream = await navigator.mediaDevices.getUserMedia(constraints);
+        getDevices();
         console.log(stream);
         changeButtons([
             'green','blue','blue', 'grey', 'grey', 'grey', 'grey', 'grey'
