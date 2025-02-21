@@ -1,6 +1,7 @@
 
 const videoEl = document.querySelector('#my-video');
 let stream = null; //Init stream variable so we can use anywhere
+let mediaStream = null;
 
 const constraints = {
     audio: true,    //Use your Headphone or be prepared for feedback!
@@ -42,7 +43,7 @@ const stopMyFeed = e=> {
     const tracks = stream.getTracks();
     tracks.forEach(track => track.stop()); // stop all tracks
     changeButtons([
-        'blue','grey','grey', 'grey', 'grey', 'grey', 'grey', 'grey '
+        'blue','grey','grey', 'grey', 'grey', 'grey', 'grey', 'grey'
     ]);
 }
 
