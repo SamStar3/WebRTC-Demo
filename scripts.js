@@ -12,7 +12,6 @@ const getMicAndCamera = async (e) => {
 
     try {
         stream = await navigator.mediaDevices.getUserMedia(constraints);
-        getDevices();
         console.log(stream);
         changeButtons([
             'green','blue','blue', 'grey', 'grey', 'grey', 'grey', 'grey'
@@ -55,3 +54,7 @@ document.querySelector('#change-size').addEventListener('click', e=>changeVideoS
 document.querySelector('#start-record').addEventListener('click', e=>startRecording(e));
 document.querySelector('#stop-record').addEventListener('click', e=>stopRecording(e));
 document.querySelector('#play-record').addEventListener('click', e=>playRecording(e));
+
+document.querySelector('#audio-input').addEventListener('change',e=>changeAudioInput(e));
+document.querySelector('#audio-output').addEventListener('change',e=>changeAudioOutput(e));
+document.querySelector('#video-output').addEventListener('change',e=>changeVideo(e));
