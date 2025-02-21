@@ -7,8 +7,8 @@ const changeVideoSize = () => {
     stream.getVideoTracks().forEach(track => {
 
         const capbilities = track.getCapabilities();
-        const height = document.getElementById('#vid-height').value;
-        const width = document.getElementById('#vid-width').value;
+        const height = document.querySelector('#vid-height').value;
+        const width = document.querySelector('#vid-width').value;
         const vConstraints = {
             height: {exact: height < capbilities.height.max? height : capbilities.height.max},
             width: {exact: width < capbilities.width.max? width : capbilities.width.max},
